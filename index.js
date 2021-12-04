@@ -174,22 +174,22 @@ discordClient.on('ready', () => {
 discordClient.login(DISCORD_TOK)
 
 const PREFIX = '!';
-const _CMD_HELP        = PREFIX + 'help';
-const _CMD_JOIN        = PREFIX + 'join';
-const _CMD_LEAVE       = PREFIX + 'leave';
+const _CMD_HELP        = PREFIX + 'aiuto';
+const _CMD_JOIN        = PREFIX + 'connetti';
+const _CMD_LEAVE       = PREFIX + 'disconneti';
 const _CMD_PLAY        = PREFIX + 'avvia';
-const _CMD_PAUSE       = PREFIX + 'pause';
-const _CMD_RESUME      = PREFIX + 'resume';
-const _CMD_SHUFFLE     = PREFIX + 'shuffle';
-const _CMD_FAVORITE    = PREFIX + 'favorite';
-const _CMD_UNFAVORITE  = PREFIX + 'unfavorite';
-const _CMD_FAVORITES   = PREFIX + 'favorites';
-const _CMD_GENRE       = PREFIX + 'genre';
-const _CMD_GENRES      = PREFIX + 'genres';
-const _CMD_CLEAR       = PREFIX + 'clear';
+const _CMD_PAUSE       = PREFIX + 'pausa';
+const _CMD_RESUME      = PREFIX + 'riassumi';
+const _CMD_SHUFFLE     = PREFIX + 'ricicla';
+const _CMD_FAVORITE    = PREFIX + 'favorisci';
+const _CMD_UNFAVORITE  = PREFIX + 'rimuovi';
+const _CMD_FAVORITES   = PREFIX + 'favoriti';
+const _CMD_GENRE       = PREFIX + 'genere';
+const _CMD_GENRES      = PREFIX + 'generi';
+const _CMD_CLEAR       = PREFIX + 'pulisci';
 const _CMD_RANDOM      = PREFIX + 'random';
 const _CMD_SKIP        = PREFIX + 'salta';
-const _CMD_QUEUE       = PREFIX + 'list';
+const _CMD_QUEUE       = PREFIX + 'lista';
 const _CMD_DEBUG       = PREFIX + 'debug';
 const _CMD_TEST        = PREFIX + 'hello';
 const _CMD_LANG        = PREFIX + 'lang';
@@ -283,16 +283,16 @@ discordClient.on('message', async (msg) => {
 function getHelpString() {
     let out = '**VOICE COMMANDS:**\n'
         out += '```'
-        out += 'music help\n'
-        out += 'music play [random, favorites, <genre> or query]\n'
-        out += 'music skip\n'
-        out += 'music pause/resume\n'
-        out += 'music shuffle\n'
-        out += 'music genres\n'
-        out += 'music set favorite\n'
-        out += 'music favorites\n'
-        out += 'music list\n'
-        out += 'music clear list\n';
+        out += 'armando aiuto\n'
+        out += 'armando avvia [random, favorites, <genre> or query]\n'
+        out += 'armando salta\n'
+        out += 'armando pausa/riavvia\n'
+        out += 'armando ricicla\n'
+        out += 'armando generi\n'
+        out += 'armando imposta favorito\n'
+        out += 'armando favoriti\n'
+        out += 'armando lista\n'
+        out += 'armando pulisci lista\n';
         out += '```'
 
         out += '**TEXT COMMANDS:**\n'
@@ -392,7 +392,7 @@ function process_commands_query(query, mapKey, userid) {
 
     let out = null;
 
-    const regex = /^pisello ([a-zA-Z]+)(.+?)?$/;
+    const regex = /^armando ([a-zA-Z]+)(.+?)?$/;
     const m = query.toLowerCase().match(regex);
     if (m && m.length) {
         const cmd = (m[1]||'').trim();
