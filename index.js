@@ -177,7 +177,7 @@ const PREFIX = '!';
 const _CMD_HELP        = PREFIX + 'help';
 const _CMD_JOIN        = PREFIX + 'join';
 const _CMD_LEAVE       = PREFIX + 'leave';
-const _CMD_PLAY        = PREFIX + 'play';
+const _CMD_PLAY        = PREFIX + 'avvia';
 const _CMD_PAUSE       = PREFIX + 'pause';
 const _CMD_RESUME      = PREFIX + 'resume';
 const _CMD_SHUFFLE     = PREFIX + 'shuffle';
@@ -188,7 +188,7 @@ const _CMD_GENRE       = PREFIX + 'genre';
 const _CMD_GENRES      = PREFIX + 'genres';
 const _CMD_CLEAR       = PREFIX + 'clear';
 const _CMD_RANDOM      = PREFIX + 'random';
-const _CMD_SKIP        = PREFIX + 'skip';
+const _CMD_SKIP        = PREFIX + 'salta';
 const _CMD_QUEUE       = PREFIX + 'list';
 const _CMD_DEBUG       = PREFIX + 'debug';
 const _CMD_TEST        = PREFIX + 'hello';
@@ -392,7 +392,7 @@ function process_commands_query(query, mapKey, userid) {
 
     let out = null;
 
-    const regex = /^music ([a-zA-Z]+)(.+?)?$/;
+    const regex = /^pisello ([a-zA-Z]+)(.+?)?$/;
     const m = query.toLowerCase().match(regex);
     if (m && m.length) {
         const cmd = (m[1]||'').trim();
