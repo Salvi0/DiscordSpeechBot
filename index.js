@@ -176,7 +176,7 @@ discordClient.login(DISCORD_TOK)
 const PREFIX = '!';
 const _CMD_HELP        = PREFIX + 'aiuto';
 const _CMD_JOIN        = PREFIX + 'connetti';
-const _CMD_LEAVE       = PREFIX + 'disconneti';
+const _CMD_LEAVE       = PREFIX + 'disconetti';
 const _CMD_PLAY        = PREFIX + 'avvia';
 const _CMD_PAUSE       = PREFIX + 'pausa';
 const _CMD_RESUME      = PREFIX + 'riassumi';
@@ -188,7 +188,7 @@ const _CMD_GENRE       = PREFIX + 'genere';
 const _CMD_GENRES      = PREFIX + 'generi';
 const _CMD_CLEAR       = PREFIX + 'pulisci';
 const _CMD_RANDOM      = PREFIX + 'random';
-const _CMD_SKIP        = PREFIX + 'salta';
+const _CMD_SKIP        = PREFIX + 'ignora';
 const _CMD_QUEUE       = PREFIX + 'lista';
 const _CMD_DEBUG       = PREFIX + 'debug';
 const _CMD_TEST        = PREFIX + 'hello';
@@ -402,7 +402,7 @@ function process_commands_query(query, mapKey, userid) {
             case 'aiuto':
                 out = _CMD_HELP;
                 break;
-            case 'salta':
+            case 'ignora':
                 out = _CMD_SKIP;
                 break;
             case 'ricicla':
