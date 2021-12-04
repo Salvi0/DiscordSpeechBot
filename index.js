@@ -399,53 +399,53 @@ function process_commands_query(query, mapKey, userid) {
         const args = (m[2]||'').trim();
 
         switch(cmd) {
-            case 'help':
+            case 'aiuto':
                 out = _CMD_HELP;
                 break;
-            case 'skip':
+            case 'salta':
                 out = _CMD_SKIP;
                 break;
-            case 'shuffle':
+            case 'ricicla':
                 out = _CMD_SHUFFLE;
                 break;
-            case 'genres':
+            case 'generi':
                 out = _CMD_GENRES;
                 break;
-            case 'pause':
+            case 'pausa':
                 out = _CMD_PAUSE;
                 break;
-            case 'resume':
+            case 'riassumi':
                 out = _CMD_RESUME;
                 break;
-            case 'clear':
+            case 'pulisci':
                 if (args == 'list')
                     out = _CMD_CLEAR;
                 break;
-            case 'list':
+            case 'lista':
                 out = _CMD_QUEUE;
                 break;
             case 'hello':
                 out = 'hello back =)'
                 break;
-            case 'favorites':
+            case 'favoriti':
                 out = _CMD_FAVORITES;
                 break;
-            case 'set':
+            case 'imposta':
                 switch (args) {
-                    case 'favorite':
-                    case 'favorites':
+                    case 'favorito':
+                    case 'favoriti':
                         out = _CMD_FAVORITE;
                         break;
                 }
                 break;
-            case 'play':
+            case 'avvia':
             case 'player':
                 switch(args) {
                     case 'random':
                         out = _CMD_RANDOM;
                         break;
-                    case 'favorite':
-                    case 'favorites':
+                    case 'favorito':
+                    case 'favoriti':
                         out = _CMD_PLAY + ' ' + 'favorites';
                         break;
                     default:
